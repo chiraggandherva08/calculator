@@ -2,9 +2,15 @@ const invest_ = document.querySelector('#return');
 const years_ = document.querySelector('#years');
 const percentage_ = document.querySelector('#percentage');
 
-percentage_.style.background = 'linear-gradient(90deg, rgb(208, 31, 75) 0%, rgb(191, 191, 191) 100%)';
-years_.style.background = 'linear-gradient(90deg, rgb(208, 31, 75) 0%, rgb(191, 191, 191) 100%)';
-invest_.style.background = 'linear-gradient(90deg, rgb(208, 31, 75) 0%, rgb(191, 191, 191) 100%)';
+
+invest_.style.background = 'linear-gradient(90deg, rgb(208, 31, 75) 0%, rgb(191, 191, 191) 0%)';
+years_.style.background = 'linear-gradient(90deg, rgb(208, 31, 75) 0%, rgb(191, 191, 191) 0%)';
+percentage_.style.background = 'linear-gradient(90deg, rgb(208, 31, 75) 0%, rgb(191, 191, 191) 0%)';
+
+document.querySelector('#rupee').value = `₹5000`;
+document.querySelector('#years_val').value = `Year: 1`;
+document.querySelector('#percentage_val').value = `8%`;
+
 
 invest_.oninput = function() {
     document.querySelector('#rupee').value = `₹${invest_.value}`;
@@ -25,7 +31,7 @@ document.querySelector('#rupee').addEventListener('change', () => {
 
 
 years_.oninput = () => {
-    document.querySelector('#years_val').value = `${years_.value} Years`;
+    document.querySelector('#years_val').value = `Years: ${years_.value}`;
     document.querySelectorAll('#result h2')[0].innerHTML = `₹${(invest_.value) * (years_.value) * 12}`;
 
     const total = invest_.value * (Math.pow(1 + percentage_.value / 1200, 12 * years_.value) - 1) / (percentage_.value / 1200);
@@ -37,7 +43,7 @@ years_.addEventListener('mousemove', () => {
 })
 document.querySelector('#years_val').addEventListener('change', () => {
     years_.value = document.querySelector('#years_val').value;
-    document.querySelector('#years_val').value = `${years_.value} Years`;
+    document.querySelector('#years_val').value = `Years ${years_.value}`;
 })
 
 

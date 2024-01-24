@@ -138,9 +138,11 @@ input[type=range]::-webkit-slider-thumb {
 #result h2 {
     font-size: 1.3em;
     color: rgb(208, 31, 75);
+    margin: -5px;
 }
 
 #result h3 {
+    margin-top: 40px;
     font-size: 0.9em;
     color: rgb(98, 98, 98);
 }
