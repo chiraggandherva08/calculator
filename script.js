@@ -2,11 +2,9 @@ const invest_ = document.querySelector('#return');
 const years_ = document.querySelector('#years');
 const percentage_ = document.querySelector('#percentage');
 
-
-const x = (percentage_.value/0.15 - 52) * 2;
-percentage_.style.background = 'linear-gradient(90deg, rgb(208, 31, 75)' + x + '%, rgb(191, 191, 191)' +  x + '%)';
-
-
+percentage_.style.background = 'linear-gradient(90deg, rgb(208, 31, 75) 0%, rgb(191, 191, 191) 100%)';
+years_.style.background = 'linear-gradient(90deg, rgb(208, 31, 75) 0%, rgb(191, 191, 191) 100%)';
+invest_.style.background = 'linear-gradient(90deg, rgb(208, 31, 75) 0%, rgb(191, 191, 191) 100%)';
 
 invest_.oninput = function() {
     document.querySelector('#rupee').value = `₹${invest_.value}`;
