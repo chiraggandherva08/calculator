@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div id="container">
+
+
+        <div id="goal-known">
+
+            <div id="select_goal">
+                <input type="radio" id="i_know">
+                <label for="i_know">I Know My Goal</label>
+    
+                <input type="radio" id="i_want_to_know">
+                <label for="i_want_to_know">I Want To Invest</label>
+            </div>
+
+            <div class="type_spec">
+                <p>I need Rs.</p>
+                <input id="rupee" type="text" placeholder="₹/Rupees">
+            </div>
+            <input id="return" type="range" min="500000" max="50000000">
+            <div class="ranges">
+                <p>5L</p>
+                <p>5Cr</p>
+            </div>
+
+
+            <div class="type_spec">
+                <p>No. of years</p>
+                <input id="years_val" type="text" placeholder="Years">
+            </div>
+            <input id="years" min="1" max="30" type="range">
+            <div class="ranges">
+                <p>1 Year</p>
+                <p>30 Years</p>
+            </div>
+
+
+            <div class="type_spec">
+                <p>Expected Return</p>
+                <input id="percentage_val" type="text" placeholder="Return/%">
+            </div>
+            <input id="percentage" type="range" min="8" max="15">
+            <div class="ranges">
+                <p>8%</p>
+                <p>15%</p>
+            </div>
+
+        </div>
+
+        <div id="result">     
+
+        </div>
+    
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
