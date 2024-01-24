@@ -32,6 +32,8 @@
     gap: 20px;
 
     font-size: 13px;
+
+    display: none;
 }
 
 #select_goal input {
@@ -125,6 +127,22 @@ input[type=range]::-webkit-slider-thumb {
 #result {
     width: calc(100% - 440px);
     background: #ededed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 20px; */
+}
+
+#result h2 {
+    font-size: 1.3em;
+    color: rgb(208, 31, 75);
+}
+
+#result h3 {
+    font-size: 0.9em;
+    color: rgb(98, 98, 98);
 }
 
 @media (max-width: 780px) {
